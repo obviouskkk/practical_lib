@@ -34,7 +34,7 @@ class MutexLock{
     bool isLockedByThisThread() const {
         return holder_ == getpid();
     }
-    pthread_mutex_t* mutex() {
+    pthread_mutex_t* getPthreadMutex() {
         return &mutex_;
     }
  private:
